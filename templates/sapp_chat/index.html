@@ -12,7 +12,7 @@
 {% block maincol %}
     
 
-<a href="/{% settings_value 'SAPP_URL' %}/module/sapp_chat/" class="col-md-6 col-lg-4">
+<a href="/{% settings_value 'SAPP_URL' %}/sapp_chat/module/" class="col-md-6 col-lg-4">
     <div class="card">
         <div class="card-body">
             <div class="row align-items-center m-l-0">
@@ -48,7 +48,7 @@
 <script>
     document.addEventListener("DOMContentLoaded", () => {
         const headers = {'X-CSRFToken': '{{ csrf_token }}'}
-        const methodsBaseURL = `/{% settings_value 'SAPP_URL' %}/api/method/sapp_chat/`
+        const methodsBaseURL = `/{% settings_value 'SAPP_URL' %}/sapp_chat/api/method/`
         const setupMessageVolumeStatsChart = () => {
             const render = (data) => {
                 (
